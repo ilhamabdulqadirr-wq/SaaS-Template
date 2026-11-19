@@ -1,49 +1,42 @@
-<!-- Footer section. Replace social links, copyright, and email form below -->
+<!-- Footer section -->
 <footer class="border-t border-slate-100 bg-slate-50/50">
   <div class="container-max section-padding">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12 mb-12">
-      <!-- Brand -->
       <div class="col-span-1 md:col-span-1">
         <div class="flex items-center gap-2 mb-4">
           <span class="text-xl font-bold text-slate-900 tracking-tight">SaaS<span class="text-orange-600">Kit</span></span>
         </div>
         <p class="text-sm text-slate-600 max-w-xs">
-          Responsive, fast, and ready-to-develop SaaS landing page template.
+          Turn raw database logs into clear product decisions. Automated SQL & API insights for SaaS teams.
         </p>
       </div>
-
-      <!-- Product -->
       <div>
         <h4 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Product</h4>
         <ul class="space-y-2">
           <li><a href="#features" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">Features</a></li>
+          <li><a href="#how-it-works" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">How it works</a></li>
           <li><a href="#pricing" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">Pricing</a></li>
-          <li><a href="#" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">Documentation</a></li>
-          <li><a href="#" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">Changelog</a></li>
+          <li><a href="#faq" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">FAQ</a></li>
         </ul>
       </div>
-
-      <!-- Company -->
       <div>
         <h4 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Company</h4>
         <ul class="space-y-2">
-          <li><a href="#" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">About Us</a></li>
+          <li><a href="#" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">About us</a></li>
           <li><a href="#" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">Careers</a></li>
           <li><a href="#" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">Contact</a></li>
-          <li><a href="#" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="text-sm text-slate-600 hover:text-orange-600 transition-colors">Privacy policy</a></li>
         </ul>
       </div>
-
-      <!-- Newsletter -->
       <div>
         <h4 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Newsletter</h4>
-        <p class="text-xs text-slate-500 mb-4">Get the latest updates straight to your inbox.</p>
+        <p class="text-xs text-slate-500 mb-4">Get product updates and data tips.</p>
         <form x-data="emailForm" @submit.prevent="submit" class="flex flex-col sm:flex-row gap-2">
           <input
             type="email"
             name="email"
             class="input-field flex-1"
-            placeholder="Your Email"
+            placeholder="Your email"
             required
           />
           <button
@@ -51,10 +44,10 @@
             :disabled="submitting"
             class="btn-primary flex-1 sm:w-auto"
           >
-            <span x-show="!submitting">Send</span>
+            <span x-show="!submitting">Subscribe</span>
             <span x-show="submitting" class="flex items-center justify-center gap-2">
               <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-              Processing…
+              Subscribing…
             </span>
           </button>
         </form>
@@ -62,11 +55,10 @@
           x-show="status === 'success'"
           class="mt-2 text-sm text-green-600"
         >
-          Thank you! We will let you know.
+          Thanks! You're subscribed.
         </p>
       </div>
     </div>
-
     <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-sm text-slate-500">
         &copy; <span id="year"></span> SaaSKit Template. All rights reserved.
@@ -78,7 +70,6 @@
       </div>
     </div>
   </div>
-
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>

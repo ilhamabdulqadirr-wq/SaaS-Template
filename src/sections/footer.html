@@ -32,9 +32,13 @@
         <h4 class="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">Newsletter</h4>
         <p class="text-xs text-slate-500 mb-4">Get product updates and data tips.</p>
         <form x-data="emailForm" @submit.prevent="submit" class="flex flex-col sm:flex-row gap-2">
+          <label class="sr-only" for="newsletter-email">Email address</label>
           <input
+            id="newsletter-email"
             type="email"
             name="email"
+            autocomplete="email"
+            spellcheck="false"
             class="input-field flex-1"
             placeholder="Your email"
             required
@@ -46,17 +50,18 @@
           >
             <span x-show="!submitting">Subscribe</span>
             <span x-show="submitting" class="flex items-center justify-center gap-2">
-              <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-              Subscribing…
+              <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                Subscribing…
             </span>
           </button>
         </form>
-        <p
-          x-show="status === 'success'"
-          class="mt-2 text-sm text-green-600"
-        >
-          Thanks! You're subscribed.
-        </p>
+          <p
+            x-show="status === 'success'"
+            class="mt-2 text-sm text-green-600"
+            aria-live="polite"
+          >
+            Thanks! You're subscribed.
+          </p>
       </div>
     </div>
     <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">

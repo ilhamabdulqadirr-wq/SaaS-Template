@@ -13,16 +13,16 @@
         <a href="#how-it-works" class="nav-link">How it works</a>
         <a href="#pricing" class="nav-link">Pricing</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#" class="btn-primary">Start Free Trial</a>
+        <button class="btn-primary">Start Free Trial</button>
       </div>
       <div class="md:hidden flex items-center gap-2">
         <button
           @click="toggle"
-          class="text-slate-600 hover:text-slate-900 focus:outline-none"
+          class="text-slate-600 hover:text-slate-900 focus-visible:ring-2 focus-visible:ring-orange-500"
           aria-label="Open menu"
           aria-expanded="false"
         >
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
@@ -44,7 +44,7 @@
       <a href="#how-it-works" @click="close" class="nav-link block py-2">How it works</a>
       <a href="#pricing" @click="close" class="nav-link block py-2">Pricing</a>
       <a href="#faq" @click="close" class="nav-link block py-2">FAQ</a>
-      <a href="#" @click="close" class="btn-primary w-full text-center">Start Free Trial</a>
+      <button @click="close" class="btn-primary w-full text-center">Start Free Trial</button>
     </div>
   </div>
 </nav>

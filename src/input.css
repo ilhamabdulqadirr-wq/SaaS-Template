@@ -58,19 +58,19 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-orange-600 text-white font-medium rounded-lg hover:bg-orange-700 transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 whitespace-nowrap;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-orange-600 text-white font-medium rounded-lg hover:bg-orange-700 transition-colors duration-200 shadow-sm hover:shadow-md active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-slate-700 border border-slate-200 font-medium rounded-lg hover:bg-slate-50 transition-all duration-200 shadow-sm active:scale-95 whitespace-nowrap;
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-slate-700 border border-slate-200 font-medium rounded-lg hover:bg-slate-50 transition-colors duration-200 shadow-sm active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center px-6 py-3 text-slate-600 font-medium rounded-lg hover:bg-slate-100 transition-colors duration-200 active:scale-95 whitespace-nowrap;
+    @apply inline-flex items-center justify-center px-6 py-3 text-slate-600 font-medium rounded-lg hover:bg-slate-100 transition-colors duration-200 active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2;
   }
 
   .card-base {
-    @apply bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200;
+    @apply bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2;
   }
 
   .badge {
@@ -104,7 +104,7 @@
   }
 
   .input-field {
-    @apply w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50/50 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder:text-slate-400;
+    @apply w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50/50 focus-visible:ring-2 focus-visible:ring-orange-500 focus:border-transparent transition-colors duration-200 text-slate-900 placeholder:text-slate-400;
   }
 
   .label {

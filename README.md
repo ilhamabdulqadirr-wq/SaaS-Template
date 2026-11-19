@@ -1,18 +1,21 @@
-# SaaSKit — SaaS Landing Page Template
+# SaaSKit — Automated SQL & API Insights Landing Page
 
-A responsive, conversion-focused landing page template ready to sell on Gumroad. Built with **Tailwind CSS** and **Alpine.js**.
+A responsive, conversion-focused landing page template for SaaS analytics products. Built with **Tailwind CSS** and **Alpine.js**.
 
 ## Features
 
 - ✅ Fully responsive (mobile-first)
 - ✅ Built-in dark mode (based on system preference)
 - ✅ Navbar with mobile menu
-- ✅ Hero section with CTA
-- ✅ Feature cards
-- ✅ Pricing table (3 plans + monthly/yearly toggle)
-- ✅ FAQ accordion
+- ✅ Hero section with badge, headline, subheadline, dual CTAs, and micro-copy
+- ✅ Problem vs. Solution comparison section
+- ✅ Core Features bento grid (4 cards: 2 large, 2 small)
+- ✅ How It Works section (3 steps)
+- ✅ Pricing section (3 tiers: Starter $0, Pro $29, Team $79)
+- ✅ FAQ accordion section
+- ✅ Final CTA banner section
 - ✅ Footer with newsletter signup
-- ✅ Tailwind CSS via CDN / build CLI
+- ✅ Tailwind CSS via build CLI
 - ✅ Alpine.js for lightweight interactivity
 - ✅ Clean code, easy to customize
 
@@ -21,15 +24,18 @@ A responsive, conversion-focused landing page template ready to sell on Gumroad.
 ```
 nama-template-landing-page/
 ├── src/
-│   ├── sections/           # HTML snippets for each section (easy copy-paste)
-│   │   ├── navbar.html
-│   │   ├── hero.html
-│   │   ├── features.html
-│   │   ├── pricing.html
-│   │   ├── faq.html
-│   │   └── footer.html
+│   ├── sections/           # HTML snippets for each section
+│   │   ├── navbar.html         # Navigation with mobile menu
+│   │   ├── hero.html           # Hero section with badge and CTAs
+│   │   ├── problem-solution.html # Before/After comparison
+│   │   ├── features.html       # Core features bento grid
+│   │   ├── how-it-works.html   # 3-step process
+│   │   ├── pricing.html        # 3 pricing tiers
+│   │   ├── faq.html            # FAQ accordion
+│   │   ├── cta-banner.html     # Final call-to-action banner
+│   │   └── footer.html         # Footer with newsletter
 │   ├── input.css           # Tailwind CSS configuration / directives
-│   └── main.js             # Light interactivity (mobile menu, FAQ, pricing toggle)
+│   └── main.js             # Alpine.js interactivity (mobile menu, FAQ, email form)
 ├── dist/                   # Compiled CSS & HTML ready for deploy/preview
 │   ├── index.html
 │   └── assets/
@@ -69,9 +75,38 @@ npm run build
 
 Build output will be in the `dist/` folder.
 
-## Customizing Colors & Fonts
+## Customizing Content
 
-### Colors
+### Hero Section (`src/sections/hero.html`)
+- Badge text (e.g. "✨ v2.0 is now live — Automated SQL & API Insights")
+- Headline and subheadline
+- Primary and secondary CTA buttons
+- Micro-copy below buttons
+
+### Problem vs. Solution (`src/sections/problem-solution.html`)
+- Section title
+- Before list items (pain points without product)
+- After list items (benefits with product)
+
+### Core Features (`src/sections/features.html`)
+- Feature titles, descriptions, and card sizes (large/small)
+
+### How It Works (`src/sections/how-it-works.html`)
+- Step numbers, titles, and descriptions
+
+### Pricing (`src/sections/pricing.html`)
+- Plan names, prices, features, and "Most Popular" badge
+
+### FAQ (`src/sections/faq.html`)
+- Questions and answers
+
+### CTA Banner (`src/sections/cta-banner.html`)
+- Headline, subheadline, and button text
+
+### Footer (`src/sections/footer.html`)
+- Brand description, links, newsletter form
+
+### Colors & Fonts
 
 Edit the `:root` section in `src/input.css`:
 
@@ -86,22 +121,7 @@ Edit the `:root` section in `src/input.css`:
 
 These variables are used throughout the components. After changing, run `npm run build` to recompile the CSS.
 
-### Font
-
 The template uses built-in system fonts (system-ui / Inter via Tailwind default). To change fonts, add a Google Fonts link in the `<head>` of `dist/index.html`, then change the font in Tailwind config or custom CSS.
-
-## Sections Frequently Changed (Manual Edit)
-
-Here are the sections usually needing adjustment before selling or using:
-
-| Section | File | Notes |
-|---------|------|-------|
-| Hero title | `src/sections/hero.html` | Replace `<h1>` text and the paragraph below it |
-| Plan prices | `src/sections/pricing.html` | Change price numbers (`$0`, `$19`, etc.) and plan names |
-| CTA button links | All sections | Change `href="#"` on `btn-primary` buttons |
-| Email form | `src/sections/footer.html` | Replace action endpoint or your email integration |
-| Logo / Brand | All sections | Change text "SaaSKit" to your brand |
-| Copyright year | `dist/index.html` | Automatic via JS (`new Date().getFullYear()`) |
 
 ## Deploy
 

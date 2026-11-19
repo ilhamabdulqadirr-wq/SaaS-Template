@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 234 88 12;
+    --color-primary-hover: 202 76 11;
+    --color-secondary: 245 246 250;
+    --color-accent: 59 130 246;
+    --color-text: 15 23 42;
+    --color-text-muted: 100 116 139;
+    --color-border: 226 232 240;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-secondary: 15 23 42;
+      --color-text: 241 245 249;
+      --color-text-muted: 148 163 184;
+      --color-border: 30 41 59;
+      --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+      --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-900 antialiased;
+  }
+
+  .section-padding {
+    @apply py-12 px-4 sm:py-16 sm:px-6 lg:py-20 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .section-title {
+    @apply text-center;
+  }
+
+  .section-title h2 {
+    @apply text-3xl md:text-4xl font-bold text-slate-900 mb-4;
+  }
+
+  .section-title p {
+    @apply text-lg text-slate-600 max-w-2xl mx-auto;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-orange-600 text-white font-medium rounded-lg hover:bg-orange-700 transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 whitespace-nowrap;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-slate-700 border border-slate-200 font-medium rounded-lg hover:bg-slate-50 transition-all duration-200 shadow-sm active:scale-95 whitespace-nowrap;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3 text-slate-600 font-medium rounded-lg hover:bg-slate-100 transition-colors duration-200 active:scale-95 whitespace-nowrap;
+  }
+
+  .card-base {
+    @apply bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium uppercase tracking-wider;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-600 via-orange-500 to-yellow-500;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-sm font-medium text-slate-600 hover:text-orange-600 transition-colors duration-200;
+  }
+
+  .feature-icon {
+    @apply w-12 h-12 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600 mb-4 shrink-0;
+  }
+
+  .pricing-card {
+    @apply card-base relative overflow-hidden;
+  }
+
+  .pricing-card.featured {
+    @apply border-orange-500 bg-orange-50 shadow-lg ring-1 ring-orange-500/20;
+  }
+
+  .faq-item {
+    @apply border-b border-slate-200 last:border-0;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50/50 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 text-slate-900 placeholder:text-slate-400;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

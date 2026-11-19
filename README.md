@@ -18,6 +18,7 @@ A responsive, conversion-focused landing page template for SaaS analytics produc
 - ✅ Tailwind CSS via build CLI
 - ✅ Alpine.js for lightweight interactivity
 - ✅ Clean code, easy to customize
+- ✅ Accessible (WCAG-aligned): focus-visible rings, aria-labels, semantic buttons, aria-hidden decorative icons, aria-live announcements, skip-link ready
 
 ## Folder Structure
 
@@ -122,6 +123,18 @@ Edit the `:root` section in `src/input.css`:
 These variables are used throughout the components. After changing, run `npm run build` to recompile the CSS.
 
 The template uses built-in system fonts (system-ui / Inter via Tailwind default). To change fonts, add a Google Fonts link in the `<head>` of `dist/index.html`, then change the font in Tailwind config or custom CSS.
+
+### Accessibility
+
+Built with Web Interface Guidelines (WIG) compliance:
+
+- **Focus states**: `focus-visible:ring-2` on all interactive elements; `outline:none` removed in favor of `:focus-visible`
+- **Semantic HTML**: `<button>` for actions, `<a>` for navigation; no `div` onClick handlers
+- **ARIA**: `aria-label` on icon buttons, `aria-expanded` on mobile menu toggle, `aria-hidden="true"` on decorative SVG icons, `aria-live="polite"` on async status messages
+- **Forms**: newsletter `<input>` has `<label>`, `autocomplete="email"`, `spellcheck="false"`
+- **Color**: `color-scheme: dark` on `<html>`, `<meta name="theme-color">` matches page background
+- **Typography**: Title Case headings, single ellipsis character `…`, `text-wrap: balance` on headings
+- **Animation**: `transition-*` properties listed explicitly (no `transition: all`), `prefers-reduced-motion` honored on spinners/rotations
 
 ## Deploy
 

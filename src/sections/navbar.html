@@ -1,4 +1,4 @@
-<!-- Navbar section. Ganti link, logo, dan tombol CTA sesuai kebutuhan -->
+<!-- Navbar section. Replace links, logo, and CTA button as needed -->
 <nav
   x-data="mobileMenu"
   class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100"
@@ -12,10 +12,10 @@
 
       <!-- Desktop menu -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="#features" class="nav-link">Fitur</a>
-        <a href="#pricing" class="nav-link">Harga</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#" class="btn-primary">Mulai Gratis</a>
+        <a href="#" class="btn-primary">Get Started Free</a>
       </div>
 
       <!-- Mobile menu button -->
@@ -23,7 +23,7 @@
         <button
           @click="toggle"
           class="text-slate-600 hover:text-slate-900 focus:outline-none"
-          aria-label="Buka menu"
+          aria-label="Open menu"
           aria-expanded="false"
         >
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
@@ -46,10 +46,10 @@
     class="md:hidden border-t border-slate-100 bg-white"
   >
     <div class="px-4 pt-2 pb-6 space-y-4">
-      <a href="#features" @click="close" class="nav-link block py-2">Fitur</a>
-      <a href="#pricing" @click="close" class="nav-link block py-2">Harga</a>
+      <a href="#features" @click="close" class="nav-link block py-2">Features</a>
+      <a href="#pricing" @click="close" class="nav-link block py-2">Pricing</a>
       <a href="#faq" @click="close" class="nav-link block py-2">FAQ</a>
-      <a href="#" @click="close" class="btn-primary w-full text-center">Mulai Gratis</a>
+      <a href="#" @click="close" class="btn-primary w-full text-center">Get Started Free</a>
     </div>
   </div>
 </nav>

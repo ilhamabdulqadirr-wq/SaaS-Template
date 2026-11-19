@@ -1,5 +1,5 @@
-// Landing page interaksi ringan dengan Alpine.js
-// Edit bagian ini sesuai kebutuhan template Anda
+// Lightweight landing page interaction with Alpine.js
+// Edit this section according to your template needs
 
 document.addEventListener("alpine:init", () => {
   Alpine.data("mobileMenu", () => ({
@@ -37,7 +37,7 @@ document.addEventListener("alpine:init", () => {
       const form = e.target;
       const email = form.elements.email.value;
 
-      // Contoh simulasi kirim ke backend. Ganti dengan endpoint email Anda.
+      // Example simulation of sending to backend. Replace with your email endpoint.
       await new Promise((resolve) => setTimeout(resolve, 1200));
 
       this.submitting = false;
